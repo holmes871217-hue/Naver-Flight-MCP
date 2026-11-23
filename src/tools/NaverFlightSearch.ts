@@ -139,7 +139,7 @@ async function makeNaverFlightRequest<T>(
       }
 
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10초 타임아웃 (네이버 API 특성 고려)
+      const timeoutId = setTimeout(() => controller.abort(), 30000); // 30초 타임아웃 (네이버 API 특성 고려)
 
       const response = await fetch(NAVER_FLIGHT_API_BASE, {
         method: "POST",
